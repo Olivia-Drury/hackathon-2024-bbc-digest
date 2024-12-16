@@ -1,21 +1,9 @@
 // home list
 {
-    [
-        {"id": 1
-    "favorite": true,
-    "data": {
-        "id": 1,
-        "category": "news",
-        "image": "https://ichef.bbci.co.uk/news/976/cpsprodpb/12A9B/production/_123456789_gettyimages-123456789.jpg"
-    }}]
-
-}
-
-{
     "homeListData" : [
         {
             "id": 1,
-            "favorite": true,
+            "favourite": true,
             "category": "news",
             "data": {
                 "title" : "News Article Title",
@@ -25,7 +13,7 @@
         },
         {
             "id": 2,
-            "favorite": false,
+            "favourite": false,
             "category": "iPlayer",
             "data": {
                 "title": "Show Title",
@@ -35,7 +23,7 @@
         },
         {
             "id": 3,
-            "favorite": true,
+            "favourite": true,
             "category": "sounds",
             "data": {
                 "title": "Podcast Title",
