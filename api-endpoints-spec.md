@@ -93,6 +93,12 @@ Gets the details of a Sounds programme.
         "title": "Series 25: 24. Northumberland",
         "image": "https://ichef.bbci.co.uk/images/ic/464x261/p0k5vwbf.jpg",
         "mediaUrl": "/media/video-1234.mp4"
+      },
+      {
+        "id": "m0025x26",
+        "title": "Series 25: 23. Berkshire",
+        "image": "https://ichef.bbci.co.uk/images/ic/464x261/p0k5vvt7.jpg",
+        "mediaUrl": "/media/video-5678.mp4"
       }
     ]
 }
@@ -103,3 +109,11 @@ Gets the details of a Sounds programme.
 ## `GET /media/:file`
 
 Download audio/video file for playback.
+
+## `GET /settings`
+
+TODO
+
+## `POST /settings`
+
+TODO
