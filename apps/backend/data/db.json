@@ -1,0 +1,47 @@
+// home list
+{
+    [
+        {"id": 1
+    "favorite": true,
+    "data": {
+        "id": 1,
+        "category": "news",
+        "image": "https://ichef.bbci.co.uk/news/976/cpsprodpb/12A9B/production/_123456789_gettyimages-123456789.jpg"
+    }}]
+
+}
+
+{
+    "homeListData" : [
+        {
+            "id": 1,
+            "favorite": true,
+            "category": "news",
+            "data": {
+                "title" : "News Article Title",
+                "image": "https://ichef.bbci.co.uk/news/976/cpsprodpb/12A9B/production/_123456789_gettyimages-123456789.jpg",
+                "uuid": "786156789"
+            }
+        },
+        {
+            "id": 2,
+            "favorite": false,
+            "category": "iPlayer",
+            "data": {
+                "title": "Show Title",
+                "image": "https://iplayer.co.uk/news/976/cpsprodpb/12A9B/production/_1852347789_gettyimages-123456789.jpg",
+                "uuid": "1852347789"
+            }
+        },
+        {
+            "id": 3,
+            "favorite": true,
+            "category": "sounds",
+            "data": {
+                "title": "Podcast Title",
+                "image": "https://sounds.bbc.co.uk/podcast/976/cpsprodpb/12A9B/production/_1125742189_gettyimages-123456789.jpg",
+                "uuid": "125742189"
+            }
+        }
+    ]
+}
