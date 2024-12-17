@@ -58,19 +58,18 @@ export const DigestCard = ({ digest }: DigestCardProps) => {
   //   };
   const getDigestAppCategory = digest.category.split("-")[0];
   return (
-    <StyledCard
-    // sx={{
-    //   p: 2,
-    //   maxWidth: 350,
-    //   borderRadius: 2,
-    // }}
-    >
+    <StyledCard>
+      <CardMedia
+        component='img'
+        height='200'
+        image={digest.data.image}
+        alt={digest.data.title}
+      />
       <CardHeader
-        avatar={<AppIcons app={getDigestAppCategory} />}
-        action={<IconButton aria-label="settings"></IconButton>}
+        action={<IconButton aria-label='settings'></IconButton>}
         title={
           <Typography
-            variant="h6"
+            variant='h6'
             sx={{
               fontWeight: 600,
               m: 2,
@@ -79,17 +78,7 @@ export const DigestCard = ({ digest }: DigestCardProps) => {
             {digest.data.title}
           </Typography>
         }
-        sx={{ display: "flex", flexDirection: "column" }}
-      />
-
-      <CardMedia
-        component="img"
-        height="200"
-        image={digest.data.image}
-        alt={digest.data.title}
-        sx={{
-          marginTop: "auto",
-        }}
+        avatar={<AppIcons app={getDigestAppCategory} />}
       />
     </StyledCard>
   );
