@@ -1,0 +1,44 @@
+{
+  "id": "m0022wvz",
+  "favourite": true,
+  "title": "Ludwig",
+  "image": "https://ichef.bbci.co.uk/images/ic/464x261/p0jqwsm2.jpg",
+  "episodes": [
+    {
+      "id": "m0022wvz",
+      "title": "Series 1: Episode 1",
+      "image": "https://ichef.bbci.co.uk/images/ic/304x171/p0jr7mwz.jpg",
+      "mediaUrl": "/media/video-1234.mp4"
+    },
+    {
+      "id": "m0022wzh",
+      "title": "Series 1: Episode 2",
+      "image": "https://ichef.bbci.co.uk/images/ic/304x171/p0jr7rjc.jpg",
+      "mediaUrl": "/media/video-5678.mp4"
+    },
+    {
+      "id": "m0022wzk",
+      "title": "Series 1: Episode 3",
+      "image": "https://ichef.bbci.co.uk/images/ic/304x171/p0jr7wzh.jpg",
+      "mediaUrl": "/media/video-1234.mp4"
+    },
+    {
+      "id": "m0022wzn",
+      "title": "Series 1: Episode 4",
+      "image": "https://ichef.bbci.co.uk/images/ic/304x171/p0jr7xcw.jpg",
+      "mediaUrl": "/media/video-5678.mp4"
+    },
+    {
+      "id": "m0022wzp",
+      "title": "Series 1: Episode 5",
+      "image": "https://ichef.bbci.co.uk/images/ic/304x171/p0jr81g2.jpg",
+      "mediaUrl": "/media/video-5678.mp4"
+    },
+    {
+      "id": "m0022wzs",
+      "title": "Series 1: Episode 6",
+      "image": "https://ichef.bbci.co.uk/images/ic/304x171/p0jr8403.jpg",
+      "mediaUrl": "/media/video-5678.mp4"
+    }
+  ]
+}

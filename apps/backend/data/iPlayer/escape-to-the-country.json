@@ -1,0 +1,20 @@
+{
+  "id": "b006vb2f",
+  "favourite": false,
+  "title": "Escape to the Country",
+  "image": "https://ichef.bbci.co.uk/images/ic/464x261/p0hwj6l0.jpg",
+  "episodes": [
+    {
+      "id": "m0025x26",
+      "title": "Series 25: 24. Northumberland",
+      "image": "https://ichef.bbci.co.uk/images/ic/464x261/p0k5vwbf.jpg",
+      "mediaUrl": "/media/video-1234.mp4"
+    },
+    {
+      "id": "m0025x26",
+      "title": "Series 25: 23. Berkshire",
+      "image": "https://ichef.bbci.co.uk/images/ic/464x261/p0k5vvt7.jpg",
+      "mediaUrl": "/media/video-5678.mp4"
+    }
+  ]
+}
