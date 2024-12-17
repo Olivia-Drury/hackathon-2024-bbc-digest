@@ -20,3 +20,8 @@ export type iplayerEpisodeData = {
   image: string;
   mediaUrl: string;
 };
+
+export enum NavigationDigest {
+  shuffle = 0,
+  favourites = 1,
+}
