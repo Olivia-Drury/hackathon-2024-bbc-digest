@@ -13,8 +13,6 @@ function loadJsonFiles(folderPath: string) {
 
 export const data = {
   news: loadJsonFiles(path.join(__dirname, 'news')),
-  iPlayer: [],
-  sounds: [],
-  // iPlayer: loadJsonFiles(path.join(__dirname, 'iPlayer')),
-  // sounds: loadJsonFiles(path.join(__dirname, 'sounds')),
+  iPlayer: loadJsonFiles(path.join(__dirname, 'iPlayer')),
+  sounds: loadJsonFiles(path.join(__dirname, 'sounds')),
 };
