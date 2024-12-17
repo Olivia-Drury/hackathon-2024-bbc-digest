@@ -10,6 +10,7 @@ function loadJsonFiles(folderPath: string) {
       return require(filePath);
     });
 }
+
 export const data = {
   newsArticles: loadJsonFiles(path.join(__dirname, 'news')),
   // iplayerProgrammes: loadJsonFiles(path.join(__dirname, 'iplayer')),
