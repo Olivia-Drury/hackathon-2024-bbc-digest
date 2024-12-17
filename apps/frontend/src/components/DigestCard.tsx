@@ -4,6 +4,7 @@ import CardMedia from "@mui/material/CardMedia";
 import IconButton from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
 import AppIcons from "../utils/AppIcons";
+import { styled } from "@mui/material/styles";
 
 // interface ExpandMoreProps extends IconButtonProps {
 //   expand: boolean;
@@ -32,7 +33,16 @@ import AppIcons from "../utils/AppIcons";
 //     },
 //   ],
 // }));
-
+const StyledCard = styled(Card)(({ theme }) => ({
+  maxWidth: 350,
+  borderRadius: theme.shape.borderRadius * 2,
+  boxShadow: "0px 4px 12px rgba(0, 0, 0, 0.1)",
+  transition: "transform 0.3s ease, box-shadow 0.3s ease",
+  "&:hover": {
+    transform: "translateY(-5px)",
+    boxShadow: "0px 6px 18px rgba(0, 0, 0, 0.2)",
+  },
+}));
 export const DigestCard = () => {
   //   const [expanded, setExpanded] = React.useState(false);
 
@@ -41,11 +51,12 @@ export const DigestCard = () => {
   //   };
 
   return (
-    <Card
-      sx={{
-        p: 2,
-        maxWidth: 350,
-      }}
+    <StyledCard
+    // sx={{
+    //   p: 2,
+    //   maxWidth: 350,
+    //   borderRadius: 2,
+    // }}
     >
       <CardHeader
         avatar={<AppIcons app="news" />}
@@ -63,6 +74,6 @@ export const DigestCard = () => {
         image="https://ichef.bbci.co.uk/ace/standard/976/cpsprodpb/3bbc/live/3a0be170-bb11-11ef-a25a-510b123ed954.png.webp"
         alt="View over Scarborough in North Yorkshire"
       />
-    </Card>
+    </StyledCard>
   );
 };
