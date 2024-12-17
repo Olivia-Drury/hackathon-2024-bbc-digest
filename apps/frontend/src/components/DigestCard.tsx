@@ -1,11 +1,9 @@
 import Card from "@mui/material/Card";
 import CardHeader from "@mui/material/CardHeader";
 import CardMedia from "@mui/material/CardMedia";
-import IconButton, { IconButtonProps } from "@mui/material/IconButton";
+import IconButton from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
-import { styled } from "@mui/material/styles";
-import * as React from "react";
-import BBCNewsIcon from "./BBCNewsIcon";
+import AppIcons from "../utils/AppIcons";
 
 // interface ExpandMoreProps extends IconButtonProps {
 //   expand: boolean;
@@ -46,14 +44,14 @@ export const DigestCard = () => {
     <Card
       sx={{
         p: 2,
-        maxWidth: 400,
+        maxWidth: 350,
       }}
     >
       <CardHeader
-        avatar={<BBCNewsIcon />}
+        avatar={<AppIcons app="news" />}
         action={<IconButton aria-label="settings"></IconButton>}
         title={
-          <Typography variant="h6">
+          <Typography variant="h6" sx={{ fontWeight: 600 }}>
             Councils to be merged in major local government shake-up
           </Typography>
         }

@@ -1,49 +1,32 @@
-import * as React from 'react';
-import Box from '@mui/system/Box';
-import Grid from '@mui/system/Grid';
-import styled from '@mui/system/styled';
-import { CardSounds } from './CardSounds'; // Adjust the path as necessary
-import { DigestCard } from './DigestCard'; // Adjust the path as necessary
+import { Box } from "@mui/material";
+import Grid from "@mui/material/Grid2";
 
-
-
-const Item = styled('div')(({ theme }) => ({
-  backgroundColor: '#fff',
-  border: '1px solid',
-  borderColor: '#ced7e0',
-  padding: theme.spacing(1),
-  borderRadius: '4px',
-  textAlign: 'center',
-  ...theme.applyStyles('dark', {
-    backgroundColor: '#1A2027',
-    borderColor: '#444d58',
-  }),
-}));
+import { DigestCard } from "./DigestCard"; // Adjust the path as necessary
 
 export const DigestGrid = () => {
   return (
-    <Box sx={{ flexGrow: 1 }}>
-      <Grid
-        container
-        spacing={{ xs: 2, md: 3 }}
-        columns={{ xs: 4, sm: 8, md: 12 }}
-      >
-        {/* {Array.from(Array(6)).map((_, index) => (
-          <Grid key={index} size={{ xs: 2, sm: 4 }}>
-            <Item>{index + 1}</Item>
-          </Grid>
-        ))} */}
-
-        <Grid size={6}>
+    <Box sx={{ flexGrow: 1, p: 4 }}>
+      {" "}
+      <Grid container spacing={3} justifyContent="center" alignItems="stretch">
+        <Grid size={{ xs: 12, sm: 6, md: 4 }}>
           <DigestCard />
         </Grid>
-        <Grid size={6}>
+        <Grid size={{ xs: 12, sm: 6, md: 4 }}>
           <DigestCard />
         </Grid>
-        <Grid size='grow'>
-          <CardSounds />
+        <Grid size={{ xs: 12, sm: 6, md: 4 }}>
+          <DigestCard />
+        </Grid>
+        <Grid size={{ xs: 12, sm: 6, md: 4 }}>
+          <DigestCard />
+        </Grid>
+        <Grid size={{ xs: 12, sm: 6, md: 4 }}>
+          <DigestCard />
+        </Grid>
+        <Grid size={{ xs: 12, sm: 6, md: 4 }}>
+          <DigestCard />
         </Grid>
       </Grid>
     </Box>
   );
-}
+};
