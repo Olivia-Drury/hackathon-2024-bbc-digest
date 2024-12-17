@@ -6,39 +6,10 @@ import { data } from '../data';
 const app: Express = express();
 const port = 3000;
 
-app.get('/home-feed', (req: Request, res: Response) => {
-  const feed = [
-    {
-      id: 'c0ewlxvlw81o',
-      favourite: true,
-      category: 'news',
-      data: {
-        title: "Chris McCausland's journey from salesman to Strictly winner",
-        image:
-          'https://ichef.bbci.co.uk/ace/standard/976/cpsprodpb/4252/live/f197d930-b944-11ef-a0f2-fd81ae5962f4.jpg.webp',
-      },
-    },
-    {
-      id: 'b006vb2f',
-      favourite: false,
-      category: 'iPlayer',
-      data: {
-        title: 'Escape to the Country',
-        image: 'https://ichef.bbci.co.uk/images/ic/464x261/p0hwj6l0.jpg',
-      },
-    },
-    {
-      id: 'p04d42rc',
-      favourite: true,
-      category: 'sounds',
-      data: {
-        title: 'CrowdScience',
-        image: 'https://ichef.bbci.co.uk/images/ic/1008x567/p0d0l8bz.jpg',
-      },
-    },
-  ];
+const homeFeed = generateHomeFeed();
 
-  res.send(feed);
+app.get('/home-feed', (req: Request, res: Response) => {
+  res.send(homeFeed);
 });
 
 app.get(`/news/:id`, (req: Request, res: Response) => {
@@ -79,3 +50,28 @@ app.use('/media', express.static(resolve(__dirname, '../media')));
 app.listen(port, () => {
   console.log(`[server]: Server is running at http://localhost:${port}`);
 });
+
+function toHomeFeedFormat(item: any, category: 'news' | 'sounds' | 'iPlayer') {
+  return {
+    id: item.id,
+    favourite: item.favourite,
+    category,
+    data: {
+      title: item.title,
+      image: item.image,
+    },
+  };
+}
+
+function generateHomeFeed() {
+  const allItems = [
+    ...data.iPlayer.map((item) => toHomeFeedFormat(item, 'iPlayer')),
+    ...data.sounds.map((item) => toHomeFeedFormat(item, 'sounds')),
+    ...data.news.map((item) => toHomeFeedFormat(item, 'news')),
+  ];
+  
+  return allItems
+    .map((value) => ({ value, sort: Math.random() }))
+    .sort((a, b) => a.sort - b.sort)
+    .map(({ value }) => value);
+}
