@@ -6,10 +6,8 @@ import { data } from '../data';
 const app: Express = express();
 const port = 3000;
 
-const homeFeed = generateHomeFeed();
-
 app.get('/home-feed', (req: Request, res: Response) => {
-  res.send(homeFeed);
+  res.send(data.homeFeed);
 });
 
 app.get(`/news/:id`, (req: Request, res: Response) => {
@@ -50,28 +48,3 @@ app.use('/media', express.static(resolve(__dirname, '../media')));
 app.listen(port, () => {
   console.log(`[server]: Server is running at http://localhost:${port}`);
 });
-
-function toHomeFeedFormat(item: any, category: 'news' | 'sounds' | 'iPlayer') {
-  return {
-    id: item.id,
-    favourite: item.favourite,
-    category,
-    data: {
-      title: item.title,
-      image: item.image,
-    },
-  };
-}
-
-function generateHomeFeed() {
-  const allItems = [
-    ...data.iPlayer.map((item) => toHomeFeedFormat(item, 'iPlayer')),
-    ...data.sounds.map((item) => toHomeFeedFormat(item, 'sounds')),
-    ...data.news.map((item) => toHomeFeedFormat(item, 'news')),
-  ];
-  
-  return allItems
-    .map((value) => ({ value, sort: Math.random() }))
-    .sort((a, b) => a.sort - b.sort)
-    .map(({ value }) => value);
-}

@@ -15,4 +15,5 @@ export const data = {
   news: loadJsonFiles(path.join(__dirname, 'news')),
   iPlayer: loadJsonFiles(path.join(__dirname, 'iPlayer')),
   sounds: loadJsonFiles(path.join(__dirname, 'sounds')),
+  homeFeed: require(path.join(__dirname, 'home-feed.json')),
 };
