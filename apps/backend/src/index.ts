@@ -1,12 +1,10 @@
 import express, { Express, Request, Response } from 'express';
-import {resolve} from 'path';
+import { resolve } from 'path';
+
+import { data } from '../data';
 
 const app: Express = express();
 const port = 3000;
-
-app.get('/', (req: Request, res: Response) => {
-  res.send('Hello from server!');
-});
 
 app.get('/home-feed', (req: Request, res: Response) => {
   const feed = [
@@ -44,17 +42,14 @@ app.get('/home-feed', (req: Request, res: Response) => {
 });
 
 app.get(`/news-articles/:id`, (req: Request, res: Response) => {
-  // TODO: Fetch req.params.id
+  const article = data.newsArticles.find(({ id }) => id === req.params.id);
 
-  res.send({
-    id: 'c0ewlxvlw81o',
-    favourite: true,
-    title: "Chris McCausland's journey from salesman to Strictly winner",
-    image:
-      'https://ichef.bbci.co.uk/ace/standard/976/cpsprodpb/4252/live/f197d930-b944-11ef-a0f2-fd81ae5962f4.jpg.webp',
-    publicationDate: '2024-12-12 10:01:01',
-    content: '...',
-  });
+  if (!article) {
+    res.status(404);
+    res.send('Article not found');
+  }
+
+  res.send(article);
 });
 
 app.get(`/sounds-programmes/:id`, (req: Request, res: Response) => {
