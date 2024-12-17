@@ -1,0 +1,32 @@
+{
+  "id": "p0605sx6",
+  "favourite": false,
+  "title": "The Unbelievable Truth",
+  "image": "https://ichef.bbci.co.uk/images/ic/320x320/p0c5ydny.jpg.webp",
+  "episodes": [
+    {
+      "id": "m0013hy8",
+      "title": "Series 27 Episode 2",
+      "image": "https://ichef.bbci.co.uk/images/ic/320x320/p0c5ydny.jpg.webp",
+      "mediaUrl": "/media/audio-1234.mp3"
+    },
+    {
+      "id": "m0013r1n",
+      "title": "Series 27 Episode 3",
+      "image": "https://ichef.bbci.co.uk/images/ic/320x320/p0c5ydny.jpg.webp",
+      "mediaUrl": "/media/audio-1234.mp3"
+    },
+    {
+      "id": "m0013zj6",
+      "title": "Series 27 Episode 4",
+      "image": "https://ichef.bbci.co.uk/images/ic/320x320/p0c5ydny.jpg.webp",
+      "mediaUrl": "/media/audio-1234.mp3"
+    },
+    {
+      "id": "m00146ph",
+      "title": "Series 27 Episode 5",
+      "image": "https://ichef.bbci.co.uk/images/ic/320x320/p0c5ydny.jpg.webp",
+      "mediaUrl": "/media/audio-1234.mp3"
+    }
+  ]
+}

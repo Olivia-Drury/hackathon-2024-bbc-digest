@@ -1,0 +1,20 @@
+{
+  "id": "m0026258",
+  "favourite": false,
+  "title": "History's Youngest Heroes",
+  "image": "https://ichef.bbci.co.uk/images/ic/320x320/p0k7v85m.jpg.webp",
+  "episodes": [
+    {
+      "id": "m0025vpz",
+      "title": "1. Nelson Mandela and the Defiance Campaign",
+      "image": "https://ichef.bbci.co.uk/images/ic/320x320/p0k7v85m.jpg.webp",
+      "mediaUrl": "/media/audio-1234.mp3"
+    },
+    {
+      "id": "m0026258",
+      "title": "2. The Brief Reign of Lady Jane",
+      "image": "https://ichef.bbci.co.uk/images/ic/320x320/p0k7v85m.jpg.webp",
+      "mediaUrl": "/media/audio-1234.mp3"
+    }
+  ]
+}
