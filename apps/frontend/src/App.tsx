@@ -21,11 +21,11 @@ function App() {
 
   // we can add loader and error handler here as well
   const { digestData } = useFetchDigestData();
-
+  console.log(digestData);
   return (
     <div className="App">
       <header className="App-header">
-        <DigestGrid />
+        <DigestGrid data={digestData} />
       </header>
     </div>
   );

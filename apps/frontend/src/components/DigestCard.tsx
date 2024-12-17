@@ -5,6 +5,7 @@ import IconButton from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
 import AppIcons from "../utils/AppIcons";
 import { styled } from "@mui/material/styles";
+import { HomeFeed } from "../models/types";
 
 // interface ExpandMoreProps extends IconButtonProps {
 //   expand: boolean;
@@ -34,8 +35,11 @@ import { styled } from "@mui/material/styles";
 //   ],
 // }));
 const StyledCard = styled(Card)(({ theme }) => ({
-  maxWidth: 350,
+  maxWidth: 450,
+  height: 350,
   borderRadius: theme.shape.borderRadius * 2,
+  display: "flex", // Use flexbox layout
+  flexDirection: "column",
   boxShadow: "0px 4px 12px rgba(0, 0, 0, 0.1)",
   transition: "transform 0.3s ease, box-shadow 0.3s ease",
   "&:hover": {
@@ -43,13 +47,16 @@ const StyledCard = styled(Card)(({ theme }) => ({
     boxShadow: "0px 6px 18px rgba(0, 0, 0, 0.2)",
   },
 }));
-export const DigestCard = () => {
+interface DigestCardProps {
+  digest: HomeFeed;
+}
+export const DigestCard = ({ digest }: DigestCardProps) => {
   //   const [expanded, setExpanded] = React.useState(false);
 
   //   const handleExpandClick = () => {
   //     setExpanded(!expanded);
   //   };
-
+  const getDigestAppCategory = digest.category.split("-")[0];
   return (
     <StyledCard
     // sx={{
@@ -59,20 +66,30 @@ export const DigestCard = () => {
     // }}
     >
       <CardHeader
-        avatar={<AppIcons app="news" />}
+        avatar={<AppIcons app={getDigestAppCategory} />}
         action={<IconButton aria-label="settings"></IconButton>}
         title={
-          <Typography variant="h6" sx={{ fontWeight: 600 }}>
-            Councils to be merged in major local government shake-up
+          <Typography
+            variant="h6"
+            sx={{
+              fontWeight: 600,
+              m: 2,
+            }}
+          >
+            {digest.data.title}
           </Typography>
         }
+        sx={{ display: "flex", flexDirection: "column" }}
       />
 
       <CardMedia
         component="img"
-        height="194"
-        image="https://ichef.bbci.co.uk/ace/standard/976/cpsprodpb/3bbc/live/3a0be170-bb11-11ef-a25a-510b123ed954.png.webp"
-        alt="View over Scarborough in North Yorkshire"
+        height="200"
+        image={digest.data.image}
+        alt={digest.data.title}
+        sx={{
+          marginTop: "auto",
+        }}
       />
     </StyledCard>
   );
