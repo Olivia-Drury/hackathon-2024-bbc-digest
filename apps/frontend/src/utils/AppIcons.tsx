@@ -13,18 +13,7 @@ const AppIcons = ({ app }: AppIconsProps) => {
     const SVGIcon = appIconsMap[app] || null;
     return SVGIcon ? <SVGIcon /> : null;
   };
-  return (
-    <SvgIcon
-      sx={{
-        svg: {
-          width: 32, // Set width to 32px
-          height: 32, // Set height to 32px
-        },
-      }}
-    >
-      {getAppIcon()}
-    </SvgIcon>
-  );
+  return <SvgIcon>{getAppIcon()}</SvgIcon>;
 };
 
 export default AppIcons;
@@ -32,11 +21,11 @@ export default AppIcons;
 const soundsSvg = () => {
   return (
     <svg
-    viewBox="0 0 336 336"
-    width="1em"
-    height="1em"
-    focusable="false"
-    aria-hidden="true"
+      viewBox="0 0 336 336"
+      width="1em"
+      height="1em"
+      focusable="false"
+      aria-hidden="true"
     >
       {" "}
       <g>
@@ -100,7 +89,7 @@ const iplayerSvg = () => {
       x="0px"
       y="0px"
       viewBox="0 0 512 512"
-       width="1em"
+      width="1em"
       height="1em"
       enable-background="new 0 0 512 512"
     >

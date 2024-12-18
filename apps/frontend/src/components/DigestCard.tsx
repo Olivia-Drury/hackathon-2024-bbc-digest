@@ -6,38 +6,12 @@ import Typography from "@mui/material/Typography";
 import AppIcons from "../utils/AppIcons";
 import { styled } from "@mui/material/styles";
 import { HomeFeed } from "../models/types";
+import { Box } from "@mui/material";
 
-// interface ExpandMoreProps extends IconButtonProps {
-//   expand: boolean;
-// }
-
-// const ExpandMore = styled((props: ExpandMoreProps) => {
-//   const { expand, ...other } = props;
-//   return <IconButton {...other} />;
-// })(({ theme }) => ({
-//   marginLeft: "auto",
-//   transition: theme.transitions.create("transform", {
-//     duration: theme.transitions.duration.shortest,
-//   }),
-//   variants: [
-//     {
-//       props: ({ expand }) => !expand,
-//       style: {
-//         transform: "rotate(0deg)",
-//       },
-//     },
-//     {
-//       props: ({ expand }) => !!expand,
-//       style: {
-//         transform: "rotate(180deg)",
-//       },
-//     },
-//   ],
-// }));
 const StyledCard = styled(Card)(({ theme }) => ({
   maxWidth: 450,
-  height: 350,
-  borderRadius: theme.shape.borderRadius * 2,
+  height: 300,
+  borderRadius: 0,
   display: "flex", // Use flexbox layout
   flexDirection: "column",
   boxShadow: "0px 4px 12px rgba(0, 0, 0, 0.1)",
@@ -51,35 +25,53 @@ interface DigestCardProps {
   digest: HomeFeed;
 }
 export const DigestCard = ({ digest }: DigestCardProps) => {
-  //   const [expanded, setExpanded] = React.useState(false);
-
-  //   const handleExpandClick = () => {
-  //     setExpanded(!expanded);
-  //   };
   const getDigestAppCategory = digest.category.split("-")[0];
   return (
     <StyledCard>
       <CardMedia
-        component='img'
-        height='200'
+        component="img"
+        height="200"
         image={digest.data.image}
         alt={digest.data.title}
       />
       <CardHeader
-        action={<IconButton aria-label='settings'></IconButton>}
+        action={<IconButton aria-label="settings"></IconButton>}
         title={
           <Typography
-            variant='h6'
+            variant="h6"
             sx={{
-              fontWeight: 600,
-              m: 2,
+              fontWeight: "800",
+              fontSize: {
+                xs: "1rem", // Small screens (mobile)
+                sm: "1.25rem", // Small devices (tablets)
+                md: "1.5rem", // Medium devices (desktop)
+                lg: "1.75rem", // Larger screens
+              },
             }}
           >
             {digest.data.title}
           </Typography>
         }
-        avatar={<AppIcons app={getDigestAppCategory} />}
+        // avatar={<AppIcons app={getDigestAppCategory} />}
       />
+      <Box
+        sx={{
+          display: "flex", // Flexbox for alignment
+          padding: 2, // Add padding
+        }}
+      >
+        <AppIcons app={getDigestAppCategory} />
+        <Typography
+          sx={{
+            ml: 1,
+          }}
+        >
+          {getDigestAppCategory === "iplayer"
+            ? "iPlayer"
+            : getDigestAppCategory.charAt(0).toUpperCase() +
+              getDigestAppCategory.slice(1)}
+        </Typography>
+      </Box>
     </StyledCard>
   );
 };
