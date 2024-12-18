@@ -1,15 +1,15 @@
-import { useState, useEffect } from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
+import DigestContent from "./components/DigestContent";
+import { DigestGrid } from "./components/DigestGrid";
+import { useFetchDigestData } from "./hooks/useFetchDigestData";
 import Layout from "./Layout";
 import { HomeFeed, NavigationDigest } from "./models/types";
-import { useFetchDigestData } from "./hooks/useFetchDigestData";
-import { DigestGrid } from "./components/DigestGrid";
-import DigestContent from "./components/DigestContent";
 import Settings from "./Settings";
 
-const App = () => {
-  const { digestData } = useFetchDigestData();
-  const [homeFeedData, setHomeFeedData] = useState<HomeFeed[]>([]);
+// lifted this out to fix the issue for useNavigate call before react router being intialised
+const Home = ({ digestData }: { digestData: HomeFeed[] }) => {
+  const [homeFeedData, setHomeFeedData] = useState<HomeFeed[]>(digestData);
 
   useEffect(() => {
     if (digestData) {
@@ -18,10 +18,6 @@ const App = () => {
   }, [digestData]);
 
   const getDigestData = (eventValue: NavigationDigest) => {
-    if (eventValue === NavigationDigest.favourites) {
-      setHomeFeedData(digestData.filter((item) => item.favourite));
-    }
-
     if (eventValue === NavigationDigest.shuffle) {
       const randomDigest = Math.floor(Math.random() * digestData.length);
       setHomeFeedData([digestData[randomDigest]]);
@@ -33,16 +29,26 @@ const App = () => {
   };
 
   return (
+    <Layout getDigestData={getDigestData}>
+      <DigestGrid data={homeFeedData} />
+    </Layout>
+  );
+};
+
+const App = () => {
+  const { digestData } = useFetchDigestData();
+  const [homeFeedData, setHomeFeedData] = useState<HomeFeed[]>([]);
+
+  useEffect(() => {
+    if (digestData) {
+      setHomeFeedData(digestData);
+    }
+  }, [digestData]);
+
+  return (
     <Router>
       <Routes>
-        <Route
-          path="/"
-          element={
-            <Layout getDigestData={getDigestData}>
-              <DigestGrid data={homeFeedData} />
-            </Layout>
-          }
-        />
+        <Route path="/" element={<Home digestData={homeFeedData} />} />
         <Route
           path="/:category/:id"
           element={

@@ -4,7 +4,7 @@ import BottomNavigation from "@mui/material/BottomNavigation";
 import BottomNavigationAction from "@mui/material/BottomNavigationAction";
 import HomeIcon from "@mui/icons-material/Home";
 import ShuffleIcon from "@mui/icons-material/Star";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 import BBCIcon from "./utils/BBCIcon";
 import { NavigationDigest } from "./models/types";
@@ -16,21 +16,55 @@ interface LayoutProps {
 }
 
 const Layout = ({ children, getDigestData }: LayoutProps) => {
+  const navigate = useNavigate();
   return (
     <div className="App">
       <header
         className="App-header"
-        style={{ display: "flex", justifyContent: "center", marginTop: 20 }}
+        style={{
+          display: "flex",
+          flex: 1,
+          flexDirection: "row",
+          marginTop: 20,
+          width: "100%",
+        }}
       >
-        <BBCIcon />
-
-        <Link to="/settings" style={{ textDecoration: "none" }}>
-          <Avatar sx={{
-            bgcolor: deepOrange[500],
-            position: "fixed",
-            right: 10, top: 7
-          }}>N</Avatar>
-        </Link>
+        <div
+          style={{
+            display: "flex",
+            flexBasis: "95%",
+            marginLeft: 60,
+            width: "100%",
+            justifyContent: "center",
+          }}
+        >
+          <BBCIcon />
+        </div>
+        <div
+          style={{
+            display: "flex",
+            flexBasis: "5%",
+            width: "100%",
+            justifyContent: "end",
+          }}
+        >
+          <Link
+            to="/settings"
+            style={{
+              textDecoration: "none",
+            }}
+          >
+            <Avatar
+              sx={{
+                bgcolor: deepOrange[500],
+                mr: 2,
+                bottom: 10,
+              }}
+            >
+              N
+            </Avatar>
+          </Link>
+        </div>
       </header>
       <Box sx={{ mb: 5 }}>{children}</Box>
       <Box>
@@ -41,15 +75,16 @@ const Layout = ({ children, getDigestData }: LayoutProps) => {
           <BottomNavigation
             showLabels
             onChange={(event, newValue) => {
+              if (newValue === 0) {
+                navigate("/");
+              }
               if (getDigestData) {
                 getDigestData(newValue);
               }
             }}
           >
-            <Link to="/">
-              <BottomNavigationAction label="Home" icon={<HomeIcon />} />
-            </Link>
-            <BottomNavigationAction label="Digest Shuffle" icon={<ShuffleIcon />} />
+            <BottomNavigationAction label="Home" icon={<HomeIcon />} />
+            <BottomNavigationAction label="Shuffle" icon={<ShuffleIcon />} />
           </BottomNavigation>
         </Paper>
       </Box>

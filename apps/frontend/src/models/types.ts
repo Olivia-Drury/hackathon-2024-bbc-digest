@@ -38,7 +38,6 @@ export interface newsData extends DigestCommonType {
 export enum NavigationDigest {
   home = 0,
   shuffle = 1,
-  favourites = 2,
 }
 
 export type CategoryType = soundsData | iPlayerData | newsData;
