@@ -14,7 +14,7 @@ app.get("/home-feed", (req: Request, res: Response) => {
     {
       id: "c0ewlxvlw81o",
       favourite: true,
-      category: "news-article",
+      category: "news-articles",
       data: {
         title: "Chris McCausland's journey from salesman to Strictly winner",
         image:
@@ -24,7 +24,7 @@ app.get("/home-feed", (req: Request, res: Response) => {
     {
       id: "b006vb2f",
       favourite: false,
-      category: "iplayer-programme",
+      category: "iplayer-programmes",
       data: {
         title: "Escape to the Country",
         image: "https://ichef.bbci.co.uk/images/ic/464x261/p0hwj6l0.jpg",
@@ -33,7 +33,7 @@ app.get("/home-feed", (req: Request, res: Response) => {
     {
       id: "p04d42rc",
       favourite: true,
-      category: "sounds-programme",
+      category: "sounds-programmes",
       data: {
         title: "CrowdScience",
         image: "https://ichef.bbci.co.uk/images/ic/1008x567/p0d0l8bz.jpg",

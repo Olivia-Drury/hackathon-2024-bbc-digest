@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import "./App.css";
 import { HomeFeed, NavigationDigest } from "./models/types";
 import BottomNavigation from "@mui/material/BottomNavigation";

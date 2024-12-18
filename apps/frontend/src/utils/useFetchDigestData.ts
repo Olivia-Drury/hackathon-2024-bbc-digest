@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { HomeFeed } from "../models/types";
+import { HomeFeed, soundsData, iPlayerData, newsData } from "../models/types";
 
 // This will be the for the whole list of favourites
 export const useFetchDigestData = () => {
@@ -15,7 +15,7 @@ export const useFetchDigestData = () => {
         });
 
         const data = await response.json();
-        console.log("DATA: ", data);
+        console.log("FULL DATA: ", data);
         if (data) {
           setDigestData(data);
         }
@@ -31,5 +31,29 @@ export const useFetchDigestData = () => {
   return { digestData };
 };
 
-// Another data caller for the individual list for each catergory
-// The will then call the end point of collating catergory / digest id with the BE "`GET /news-articles/:id`"
+// Api call to get Sounds Series
+export const useFetchCatergoryData = () => {
+  const [catergoryData, setCatergoryData] = useState<soundsData[] | iPlayerData[] | newsData[] >([]);
+  const fetchCatergoryData = async (category: string, id: string) => {
+    try {
+
+
+      const response = await fetch(`http://localhost:4000/${category}/${id}`, {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+
+      const data = await response.json();
+      if (data) {
+        setCatergoryData(data);
+      }
+    } catch (err) {
+      console.error(err);
+    } finally {
+    }
+  };
+  return { fetchCatergoryData, catergoryData };
+};
+

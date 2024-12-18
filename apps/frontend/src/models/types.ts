@@ -21,6 +21,27 @@ export type iplayerEpisodeData = {
   mediaUrl: string;
 };
 
+export interface soundsData extends HomeFeed {
+  title: string;
+  image: string;
+  episodes: [soundsEpisodeData];
+}
+
+export type soundsEpisodeData = {
+  id: string;
+  title: string;
+  image: string;
+  mediaUrl: string;
+}
+
+
+export interface newsData extends HomeFeed {
+  title: string;
+  image: string;
+  publicationDate: string;
+  content: string;
+}
+
 export enum NavigationDigest {
   home = 0,
   shuffle = 1,

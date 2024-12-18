@@ -1,3 +1,4 @@
+import { useFetchCatergoryData } from "../utils/useFetchDigestData";
 import Card from "@mui/material/Card";
 import CardHeader from "@mui/material/CardHeader";
 import CardMedia from "@mui/material/CardMedia";
@@ -24,7 +25,16 @@ interface DigestCardProps {
   digest: HomeFeed;
 }
 export const DigestCard = ({ digest }: DigestCardProps) => {
-  const getDigestAppCategory = digest.category.split("-")[0];
+  const getDigestAppCategory = digest.category.split('-')[0];
+  // set the card state
+  const { fetchCatergoryData, catergoryData } = useFetchCatergoryData();
+
+  const handleClickCard = () => {
+    fetchCatergoryData(digest.category, digest.id);
+  };
+
+  console.log('CONTENT Data: ', catergoryData);
+
   return (
     <StyledCard
       sx={{
@@ -35,25 +45,26 @@ export const DigestCard = ({ digest }: DigestCardProps) => {
           lg: 350,
         },
       }}
+      onClick={handleClickCard}
     >
       <CardMedia
-        component="img"
-        height="200"
+        component='img'
+        height='200'
         image={digest.data.image}
         alt={digest.data.title}
       />
       <CardHeader
-        action={<IconButton aria-label="settings"></IconButton>}
+        action={<IconButton aria-label='settings'></IconButton>}
         title={
           <Typography
-            variant="h6"
+            variant='h6'
             sx={{
-              fontWeight: "800",
+              fontWeight: '800',
               fontSize: {
-                xs: "1rem",
-                sm: "1rem",
-                md: "1rem",
-                lg: "1.2rem",
+                xs: '1rem',
+                sm: '1rem',
+                md: '1rem',
+                lg: '1.2rem',
               },
             }}
           >
@@ -63,7 +74,7 @@ export const DigestCard = ({ digest }: DigestCardProps) => {
       />
       <Box
         sx={{
-          display: "flex", // Flexbox for alignment
+          display: 'flex', // Flexbox for alignment
           padding: 2, // Add padding
         }}
       >
@@ -73,8 +84,8 @@ export const DigestCard = ({ digest }: DigestCardProps) => {
             ml: 1,
           }}
         >
-          {getDigestAppCategory === "iplayer"
-            ? "iPlayer"
+          {getDigestAppCategory === 'iplayer'
+            ? 'iPlayer'
             : getDigestAppCategory.charAt(0).toUpperCase() +
               getDigestAppCategory.slice(1)}
         </Typography>
