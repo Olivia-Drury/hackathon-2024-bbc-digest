@@ -29,7 +29,7 @@ export const DigestCard = ({ digest }: DigestCardProps) => {
     <StyledCard
       sx={{
         height: {
-          xs: 300,
+          xs: 320,
           sm: 320,
           md: 350,
           lg: 350,
