@@ -5,6 +5,7 @@ import { HomeFeed, NavigationDigest } from "./models/types";
 import { useFetchDigestData } from "./hooks/useFetchDigestData";
 import { DigestGrid } from "./components/DigestGrid";
 import DigestContent from "./components/DigestContent";
+import Settings from "./Settings";
 
 const App = () => {
   const { digestData } = useFetchDigestData();
@@ -47,6 +48,14 @@ const App = () => {
           element={
             <Layout>
               <DigestContent />
+            </Layout>
+          }
+        />
+        <Route
+          path="/settings"
+          element={
+            <Layout>
+              <Settings />
             </Layout>
           }
         />
