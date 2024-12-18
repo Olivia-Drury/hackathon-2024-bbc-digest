@@ -35,8 +35,14 @@ function App() {
   const getDigestData = (eventValue: NavigationDigest) => {
     if (eventValue === NavigationDigest.favourites) {
       setHomeFeedData(filteredDigestData(digestData));
-    } else {
+    }
+
+    if (eventValue === NavigationDigest.shuffle) {
       setHomeFeedData([shuffleDigestData(digestData)]);
+    }
+
+    if (eventValue === NavigationDigest.home) {
+      setHomeFeedData(digestData);
     }
   };
 

@@ -22,6 +22,7 @@ export type iplayerEpisodeData = {
 };
 
 export enum NavigationDigest {
-  shuffle = 0,
-  favourites = 1,
+  home = 0,
+  shuffle = 1,
+  favourites = 2,
 }
