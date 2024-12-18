@@ -8,31 +8,31 @@
       "id": "m001cbmt",
       "title": "Series 1: 1.In the Beginnings",
       "image": "https://ichef.bbci.co.uk/images/ic/304x171/p0d0njnb.jpg",
-      "mediaUrl": "/media/video-1234.mp4"
+      "mediaUrl": "./videoFiles/cunk-on-earth.mp4"
     },
     {
       "id": "p0cz87q8",
       "title": "Series 1: 2.Faith/Off",
       "image": "https://ichef.bbci.co.uk/images/ic/304x171/p0d0y8rb.jpg",
-      "mediaUrl": "/media/video-5678.mp4"
+      "mediaUrl": "./videoFiles/cunk-on-earth.mp4"
     },
     {
       "id": "m001cbmt",
       "title": "Series 1: 3.The Renaissance will Not Be Televised",
       "image": "https://ichef.bbci.co.uk/images/ic/304x171/p0d0y99r.jpg",
-      "mediaUrl": "/media/video-1234.mp4"
+      "mediaUrl": "./videoFiles/cunk-on-earth.mp4"
     },
     {
       "id": "p0cz8hfc",
       "title": "Series 1: 4. Rise of the Machines",
       "image": "https://ichef.bbci.co.uk/images/ic/304x171/p0d0y9hk.jpg",
-      "mediaUrl": "/media/video-5678.mp4"
+      "mediaUrl": "./videoFiles/cunk-on-earth.mp4"
     },
     {
       "id": "p0cz8jhv",
       "title": "Series 1: 5. War(s) of the World(s)",
       "image": "https://ichef.bbci.co.uk/images/ic/304x171/p0d0y9nx.jpg",
-      "mediaUrl": "/media/video-5678.mp4"
+      "mediaUrl": "./videoFiles/cunk-on-earth.mp4"
     }
   ]
 }

@@ -8,37 +8,37 @@
       "id": "p0kbb2jy",
       "title": "Sidetracked by Christmas",
       "image": "https://ichef.bbci.co.uk/images/ic/1024x576/p0j6kxlw.jpg.webp",
-      "mediaUrl": "/media/audio-1234.mp3"
+      "mediaUrl": "./audioFiles/sidetracked-kendrick-lamar.mp3"
     },
     {
       "id": "p0k8z4kj",
       "title": "Kneecap, The Brat Tour and Low Carbon Gigging",
       "image": "https://ichef.bbci.co.uk/images/ic/1024x576/p0j6kxlw.jpg.webp",
-      "mediaUrl": "/media/audio-1234.mp3"
+      "mediaUrl": ".audioFiles/sidetracked-kneecap-the-brat-tour-and-low-carbon-gigging.mp3"
     },
     {
       "id": "p0k7d1x1",
       "title": "Kendrick Lamar, Butts for Tour Buses and Saving UK Club Culture",
       "image": "https://ichef.bbci.co.uk/images/ic/1024x576/p0j6kxlw.jpg.webp",
-      "mediaUrl": "/media/audio-1234.mp3"
+      "mediaUrl": "./audioFiles/sidetracked-kendrick-lamar.mp3"
     },
     {
       "id": "p0kbb2jy",
       "title": "Beyoncé’s Christmas Takeover, Glastonbury Rumours and Are Music Videos Over?",
       "image": "https://ichef.bbci.co.uk/images/ic/1024x576/p0j6kxlw.jpg.webp",
-      "mediaUrl": "/media/audio-1234.mp3"
+      "mediaUrl": "./audioFiles/sidetracked-kendrick-lamar.mp3"
     },
     {
       "id": "p0k8z4kj",
       "title": "EMAs, Cowboy Carter and Busta Rhymes’ Return to Lancashire",
       "image": "https://ichef.bbci.co.uk/images/ic/1024x576/p0j6kxlw.jpg.webp",
-      "mediaUrl": "/media/audio-1234.mp3"
+      "mediaUrl": "./audioFiles/sidetracked-kendrick-lamar.mp3"
     },
     {
       "id": "p0k7d1x1",
       "title": "Sidetracked with Ghetts",
       "image": "https://ichef.bbci.co.uk/images/ic/1024x576/p0j6kxlw.jpg.webp",
-      "mediaUrl": "/media/audio-1234.mp3"
+      "mediaUrl": "./audioFiles/sidetracked-with-ghetts.mp3"
     }
   ]
 }
