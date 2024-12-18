@@ -54,22 +54,15 @@ const DigestContent = () => {
         <h1>{data.title}</h1>
         <p>{data.description}</p>
       </Box>
-      {data.episodes.map((episode: iplayerSoundsEpisodeData) => {
+      {data.episodes && data.episodes.map((episode: iplayerSoundsEpisodeData) => {
         return (
           <StyledEpisodeCard>
             <Card
               sx={{
-                height: {
-                  xs: 320,
-                  sm: 320,
-                  md: 350,
-                  lg: 350,
-                },
                 display: 'flex',
                 flexDirection: 'row',
               }}
             >
-              <CardActionArea>
                 <CardMedia
                   component='img'
                   sx={{ width: 151 }}
@@ -81,7 +74,7 @@ const DigestContent = () => {
                     {episode.title}
                   </Typography>
                 </CardContent>
-              </CardActionArea>
+
             </Card>
           </StyledEpisodeCard>
         );
