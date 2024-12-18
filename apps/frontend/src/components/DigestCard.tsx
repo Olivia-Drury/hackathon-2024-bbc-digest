@@ -10,7 +10,6 @@ import { Box } from "@mui/material";
 
 const StyledCard = styled(Card)(({ theme }) => ({
   maxWidth: 450,
-  height: 300,
   borderRadius: 0,
   display: "flex", // Use flexbox layout
   flexDirection: "column",
@@ -27,7 +26,16 @@ interface DigestCardProps {
 export const DigestCard = ({ digest }: DigestCardProps) => {
   const getDigestAppCategory = digest.category.split("-")[0];
   return (
-    <StyledCard>
+    <StyledCard
+      sx={{
+        height: {
+          xs: 300,
+          sm: 320,
+          md: 350,
+          lg: 350,
+        },
+      }}
+    >
       <CardMedia
         component="img"
         height="200"
@@ -42,17 +50,16 @@ export const DigestCard = ({ digest }: DigestCardProps) => {
             sx={{
               fontWeight: "800",
               fontSize: {
-                xs: "1rem", // Small screens (mobile)
-                sm: "1.25rem", // Small devices (tablets)
-                md: "1.5rem", // Medium devices (desktop)
-                lg: "1.75rem", // Larger screens
+                xs: "1rem",
+                sm: "1rem",
+                md: "1rem",
+                lg: "1.2rem",
               },
             }}
           >
             {digest.data.title}
           </Typography>
         }
-        // avatar={<AppIcons app={getDigestAppCategory} />}
       />
       <Box
         sx={{
