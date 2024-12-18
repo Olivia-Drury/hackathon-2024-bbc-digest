@@ -19,13 +19,11 @@ function filteredDigestData(digestData: HomeFeed[]) {
 }
 
 function shuffleDigestData(digestData: HomeFeed[]) {
-  const filteredFavouriteDigest = digestData.filter(
-    (item: HomeFeed) => item.favourite
-  );
+
   const randomDigest = Math.floor(
-    Math.random() * filteredFavouriteDigest.length
+    Math.random() * digestData.length
   );
-  return filteredFavouriteDigest[randomDigest];
+  return digestData[randomDigest];
 }
 
 function App() {
@@ -71,8 +69,8 @@ function App() {
           >
             <BottomNavigationAction label="Home" icon={<HomeIcon />} />
             <BottomNavigationAction label="Shuffle" icon={<ShuffleIcon />} />
-            <BottomNavigationAction label="Favorites" icon={<FavoriteIcon />} />
-            <BottomNavigationAction label="Download" icon={<DownloadIcon />} />
+            {/* <BottomNavigationAction label="Favorites" icon={<FavoriteIcon />} /> */}
+            <BottomNavigationAction label="Settings" icon={<DownloadIcon />} />
           </BottomNavigation>
         </Paper>
       </Box>
