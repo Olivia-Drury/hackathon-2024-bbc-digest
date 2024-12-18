@@ -6,9 +6,10 @@ import IconButton from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
 import AppIcons from "../utils/AppIcons";
 import { styled } from "@mui/material/styles";
-import { HomeFeed } from "../models/types";
+import { HomeFeed, iPlayerData, newsData, soundsData } from "../models/types";
 import { Box } from "@mui/material";
 import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
 
 const StyledCard = styled(Card)(({ theme }) => ({
   maxWidth: 450,
@@ -33,8 +34,13 @@ export const DigestCard = ({ digest }: DigestCardProps) => {
 
   const handleClickCard = () => {
     fetchCatergoryData(digest.category, digest.id);
-    navigate(`/${digest.category}/${digest.id}`, { state: digest });
   };
+
+  useEffect(() => {
+    if (catergoryData) {
+      navigate(`/${digest.category}/${digest.id}`, { state: catergoryData });
+    }
+  }, [catergoryData]);
 
   console.log("CONTENT Data: ", catergoryData);
 

@@ -1,8 +1,8 @@
 import { Box } from "@mui/material";
 import Grid from "@mui/material/Grid2";
 
-import { DigestCard } from "./DigestCard"; // Adjust the path as necessary
 import { HomeFeed } from "../models/types";
+import { DigestCard } from "./DigestCard"; // Adjust the path as necessary
 interface DigestGridProps {
   data: HomeFeed[];
 }

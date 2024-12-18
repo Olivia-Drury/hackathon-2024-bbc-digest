@@ -8,36 +8,29 @@ export type HomeFeed = {
   };
 };
 
-export interface iPlayerData extends HomeFeed {
+export type DigestCommonType = {
+  id: string;
+  favourite: boolean;
   title: string;
   image: string;
-  episodes: [iplayerEpisodeData];
+};
+
+export interface iPlayerData extends DigestCommonType {
+  episodes: [iplayerSoundsEpisodeData];
 }
 
-export type iplayerEpisodeData = {
+export type iplayerSoundsEpisodeData = {
   id: string;
   title: string;
   image: string;
   mediaUrl: string;
 };
 
-export interface soundsData extends HomeFeed {
-  title: string;
-  image: string;
-  episodes: [soundsEpisodeData];
+export interface soundsData extends DigestCommonType {
+  episodes: [iplayerSoundsEpisodeData];
 }
 
-export type soundsEpisodeData = {
-  id: string;
-  title: string;
-  image: string;
-  mediaUrl: string;
-}
-
-
-export interface newsData extends HomeFeed {
-  title: string;
-  image: string;
+export interface newsData extends DigestCommonType {
   publicationDate: string;
   content: string;
 }
@@ -47,3 +40,5 @@ export enum NavigationDigest {
   shuffle = 1,
   favourites = 2,
 }
+
+export type CategoryType = soundsData | iPlayerData | newsData;
