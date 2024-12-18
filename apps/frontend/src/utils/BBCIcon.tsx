@@ -2,7 +2,11 @@ import { SvgIcon } from "@mui/material";
 
 const BBCIcon = () => {
   return (
-    <SvgIcon>
+    <SvgIcon
+      sx={{
+        width: 62,
+      }}
+    >
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 112 32"
