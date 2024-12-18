@@ -57,7 +57,7 @@ function App() {
       <header className="App-header" style={{ marginTop: 20 }}>
         <BBCIcon />
       </header>
-      <Box>{<DigestGrid data={homeFeedData} />}</Box>
+      <Box sx={{mb: 5}}>{<DigestGrid data={homeFeedData} />}</Box>
       <Box>
         <Paper
           sx={{ position: "fixed", bottom: 0, left: 0, right: 0 }}
