@@ -1,4 +1,4 @@
-import { useFetchCatergoryData } from "../utils/useFetchDigestData";
+import { useFetchCatergoryData } from "../hooks/useFetchDigestData";
 import Card from "@mui/material/Card";
 import CardHeader from "@mui/material/CardHeader";
 import CardMedia from "@mui/material/CardMedia";
@@ -8,6 +8,7 @@ import AppIcons from "../utils/AppIcons";
 import { styled } from "@mui/material/styles";
 import { HomeFeed } from "../models/types";
 import { Box } from "@mui/material";
+import { useNavigate } from "react-router-dom";
 
 const StyledCard = styled(Card)(({ theme }) => ({
   maxWidth: 450,
@@ -25,15 +26,17 @@ interface DigestCardProps {
   digest: HomeFeed;
 }
 export const DigestCard = ({ digest }: DigestCardProps) => {
-  const getDigestAppCategory = digest.category.split('-')[0];
-  // set the card state
+  const getDigestAppCategory = digest.category.split("-")[0];
+  const navigate = useNavigate();
+
   const { fetchCatergoryData, catergoryData } = useFetchCatergoryData();
 
   const handleClickCard = () => {
     fetchCatergoryData(digest.category, digest.id);
+    navigate(`/${digest.category}/${digest.id}`, { state: digest });
   };
 
-  console.log('CONTENT Data: ', catergoryData);
+  console.log("CONTENT Data: ", catergoryData);
 
   return (
     <StyledCard
@@ -48,23 +51,23 @@ export const DigestCard = ({ digest }: DigestCardProps) => {
       onClick={handleClickCard}
     >
       <CardMedia
-        component='img'
-        height='200'
+        component="img"
+        height="200"
         image={digest.data.image}
         alt={digest.data.title}
       />
       <CardHeader
-        action={<IconButton aria-label='settings'></IconButton>}
+        action={<IconButton aria-label="settings"></IconButton>}
         title={
           <Typography
-            variant='h6'
+            variant="h6"
             sx={{
-              fontWeight: '800',
+              fontWeight: "800",
               fontSize: {
-                xs: '1rem',
-                sm: '1rem',
-                md: '1rem',
-                lg: '1.2rem',
+                xs: "1rem",
+                sm: "1rem",
+                md: "1rem",
+                lg: "1.2rem",
               },
             }}
           >
@@ -74,7 +77,7 @@ export const DigestCard = ({ digest }: DigestCardProps) => {
       />
       <Box
         sx={{
-          display: 'flex', // Flexbox for alignment
+          display: "flex", // Flexbox for alignment
           padding: 2, // Add padding
         }}
       >
@@ -84,8 +87,8 @@ export const DigestCard = ({ digest }: DigestCardProps) => {
             ml: 1,
           }}
         >
-          {getDigestAppCategory === 'iplayer'
-            ? 'iPlayer'
+          {getDigestAppCategory === "iplayer"
+            ? "iPlayer"
             : getDigestAppCategory.charAt(0).toUpperCase() +
               getDigestAppCategory.slice(1)}
         </Typography>
