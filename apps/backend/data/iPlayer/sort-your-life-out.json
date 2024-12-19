@@ -1,44 +1,44 @@
 {
-  "id": "m0022wvz",
+  "id": "m001wkvj",
   "favourite": true,
-  "title": "Ludwig",
+  "title": "Sort Your Life Out",
   "image": "https://ichef.bbci.co.uk/images/ic/464x261/p0jqwsm2.jpg",
   "episodes": [
     {
-      "id": "m0022wvz",
+      "id": "m001wkvj",
       "title": "Series 1: Episode 1",
-      "image": "https://ichef.bbci.co.uk/images/ic/304x171/p0jr7mwz.jpg",
-      "mediaUrl": "/media/video-1234.mp4"
+      "image": "https://ichef.bbci.co.uk/images/ic/304x171/p0hfkmrh.jpg",
+      "mediaUrl": "./videoFiles/sort-your-life-out.mp4"
     },
     {
-      "id": "m0022wzh",
+      "id": "m001x0ws",
       "title": "Series 1: Episode 2",
       "image": "https://ichef.bbci.co.uk/images/ic/304x171/p0jr7rjc.jpg",
-      "mediaUrl": "/media/video-5678.mp4"
+      "mediaUrl": "./videoFiles/sort-your-life-out.mp4"
     },
     {
-      "id": "m0022wzk",
+      "id": "m001x7w5",
       "title": "Series 1: Episode 3",
-      "image": "https://ichef.bbci.co.uk/images/ic/304x171/p0jr7wzh.jpg",
-      "mediaUrl": "/media/video-1234.mp4"
+      "image": "https://ichef.bbci.co.uk/images/ic/304x171/p0hgx4xf.jpg",
+      "mediaUrl": "./videoFiles/sort-your-life-out.mp4"
     },
     {
-      "id": "m0022wzn",
+      "id": "m001xgq6",
       "title": "Series 1: Episode 4",
-      "image": "https://ichef.bbci.co.uk/images/ic/304x171/p0jr7xcw.jpg",
-      "mediaUrl": "/media/video-5678.mp4"
+      "image": "https://ichef.bbci.co.uk/images/ic/304x171/p0hjl4q7.jpg",
+      "mediaUrl": "./videoFiles/sort-your-life-out.mp4"
     },
     {
-      "id": "m0022wzp",
+      "id": "m001xpqj",
       "title": "Series 1: Episode 5",
-      "image": "https://ichef.bbci.co.uk/images/ic/304x171/p0jr81g2.jpg",
-      "mediaUrl": "/media/video-5678.mp4"
+      "image": "https://ichef.bbci.co.uk/images/ic/304x171/p0hl1lg2.jpg",
+      "mediaUrl": "./videoFiles/sort-your-life-out.mp4"
     },
     {
-      "id": "m0022wzs",
+      "id": "m001xy2n",
       "title": "Series 1: Episode 6",
-      "image": "https://ichef.bbci.co.uk/images/ic/304x171/p0jr8403.jpg",
-      "mediaUrl": "/media/video-5678.mp4"
+      "image": "https://ichef.bbci.co.uk/images/ic/304x171/p0hm76ms.jpg",
+      "mediaUrl": "./videoFiles/sort-your-life-out.mp4"
     }
   ]
 }

@@ -1,0 +1,44 @@
+{
+  "id": "m0025vpv",
+  "favourite": false,
+  "title": "The Willpower Detectives",
+  "image": "https://ichef.bbci.co.uk/images/ic/320x320/p0k7vbtr.jpg.webp",
+  "episodes": [
+    {
+      "id": "m0025vpv",
+      "title": "Ep 1. The Doorstop Stranger",
+      "image": "https://ichef.bbci.co.uk/images/ic/320x320/p0k7vbtr.jpg.webp",
+      "mediaUrl": "/media/audio-1234.mp3"
+    },
+    {
+      "id": "m0025vhf",
+      "title": "Ep 2. A Trust Betrayal",
+      "image": "https://ichef.bbci.co.uk/images/ic/320x320/p0k7vbtr.jpg.webp",
+      "mediaUrl": "/media/audio-1234.mp3"
+    },
+    {
+      "id": "m0025w5j",
+      "title": "Ep 3. My Dying Wish",
+      "image": "https://ichef.bbci.co.uk/images/ic/320x320/p0k7vbtr.jpg.webp",
+      "mediaUrl": "/media/audio-1234.mp3"
+    },
+    {
+      "id": "m0025vvz",
+      "title": "Ep 4. Undue Influence",
+      "image": "https://ichef.bbci.co.uk/images/ic/320x320/p0k7vbtr.jpg.webp",
+      "mediaUrl": "/media/audio-1234.mp3"
+    },
+    {
+      "id": "m0025w1r",
+      "title": "Ep 5. Rich Pickings",
+      "image": "https://ichef.bbci.co.uk/images/ic/320x320/p0k7vbtr.jpg.webp",
+      "mediaUrl": "/media/audio-1234.mp3"
+    },
+    {
+      "id": "m0026251",
+      "title": "Ep 6. Falling on Deaf Ears",
+      "image": "https://ichef.bbci.co.uk/images/ic/320x320/p0k7vbtr.jpg.webp",
+      "mediaUrl": "/media/audio-1234.mp3"
+    }
+  ]
+}

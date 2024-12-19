@@ -1,0 +1,44 @@
+{
+  "id": "p0605sx6",
+  "favourite": false,
+  "title": "Evil Genius with Russel Kane",
+  "image": "https://ichef.bbci.co.uk/images/ic/1024x576/p0jw5q0z.jpg.webp",
+  "episodes": [
+    {
+      "id": "p0kb5fmz",
+      "title": "Lady Macbeth",
+      "image": "https://ichef.bbci.co.uk/images/ic/1024x576/p0jw5q0z.jpg.webp",
+      "mediaUrl": "/media/audio-1234.mp3"
+    },
+    {
+      "id": "p0k8mhh0",
+      "title": "John D. Rockefeller",
+      "image": "https://ichef.bbci.co.uk/images/ic/1024x576/p0jw5q0z.jpg.webp",
+      "mediaUrl": "/media/audio-1234.mp3"
+    },
+    {
+      "id": "p0k73f64",
+      "title": "Oliver Cromwell",
+      "image": "https://ichef.bbci.co.uk/images/ic/1024x576/p0jw5q0z.jpg.webp",
+      "mediaUrl": "/media/audio-1234.mp3"
+    },
+    {
+      "id": "p0k4w5nf",
+      "title": "Jim Morrison",
+      "image": "https://ichef.bbci.co.uk/images/ic/1024x576/p0jw5q0z.jpg.webp",
+      "mediaUrl": "/media/audio-1234.mp3"
+    },
+    {
+      "id": "p0k2r19z",
+      "title": "Marlene Dietrich",
+      "image": "https://ichef.bbci.co.uk/images/ic/1024x576/p0jw5q0z.jpg.webp",
+      "mediaUrl": "/media/audio-1234.mp3"
+    },
+    {
+      "id": "p0k0xvcb",
+      "title": "Miles Davis",
+      "image": "https://ichef.bbci.co.uk/images/ic/1024x576/p0jw5q0z.jpg.webp",
+      "mediaUrl": "/media/audio-1234.mp3"
+    }
+  ]
+}
