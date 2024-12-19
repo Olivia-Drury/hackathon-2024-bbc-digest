@@ -4,7 +4,7 @@ const BBCIcon = () => {
   return (
     <SvgIcon
       sx={{
-        width: 62,
+        width: 82,
       }}
     >
       <svg

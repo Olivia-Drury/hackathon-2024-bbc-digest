@@ -8,13 +8,13 @@
       "id": "m0025x26",
       "title": "Series 25: 24. Northumberland",
       "image": "https://ichef.bbci.co.uk/images/ic/464x261/p0k5vwbf.jpg",
-      "mediaUrl": "./videoFiles/escape-to-the-country.mp4"
+      "mediaUrl": "http://localhost:4000/data/videoFiles/escape-to-the-country.mp4"
     },
     {
       "id": "m0025x26",
       "title": "Series 25: 23. Berkshire",
       "image": "https://ichef.bbci.co.uk/images/ic/464x261/p0k5vvt7.jpg",
-      "mediaUrl": "./videoFiles/escape-to-the-country.mp4"
+      "mediaUrl": "http://localhost:4000/data/videoFiles/escape-to-the-country.mp4"
     }
   ]
 }

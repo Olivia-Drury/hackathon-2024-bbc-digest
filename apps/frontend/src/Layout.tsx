@@ -5,7 +5,7 @@ import BottomNavigationAction from "@mui/material/BottomNavigationAction";
 import HomeIcon from "@mui/icons-material/Home";
 import ShuffleIcon from "@mui/icons-material/Star";
 import { Link, useNavigate } from "react-router-dom";
-
+import SettingsIcon from "@mui/icons-material/Settings";
 import BBCIcon from "./utils/BBCIcon";
 import { NavigationDigest } from "./models/types";
 import { deepOrange } from "@mui/material/colors";
@@ -56,7 +56,7 @@ const Layout = ({ children, getDigestData }: LayoutProps) => {
           >
             <Avatar
               sx={{
-                bgcolor: deepOrange[500],
+                bgcolor: "#3223dc",
                 mr: 2,
                 bottom: 10,
               }}
