@@ -2,10 +2,11 @@ import express, { Express, Request, Response } from 'express';
 import { resolve } from 'path';
 
 import { data } from '../data';
-// import cors from "cors";
+import cors from "cors";
 
 const app: Express = express();
-const port = 3000;
+app.use(cors());
+const port = 4000;
 
 app.get('/home-feed', (req: Request, res: Response) => {
   res.send(data.homeFeed);
