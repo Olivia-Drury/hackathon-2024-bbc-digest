@@ -8,7 +8,7 @@ const AppIcons = ({ app }: AppIconsProps) => {
     const appIconsMap: { [key: string]: React.FC } = {
       sounds: soundsSvg,
       news: newsSvg,
-      iplayer: iplayerSvg,
+      iPlayer: iplayerSvg,
     };
     const SVGIcon = appIconsMap[app] || null;
     return SVGIcon ? <SVGIcon /> : null;

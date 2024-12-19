@@ -1,15 +1,15 @@
-import { useFetchCatergoryData } from "../hooks/useFetchDigestData";
+import { Box } from "@mui/material";
 import Card from "@mui/material/Card";
 import CardHeader from "@mui/material/CardHeader";
 import CardMedia from "@mui/material/CardMedia";
 import IconButton from "@mui/material/IconButton";
-import Typography from "@mui/material/Typography";
-import AppIcons from "../utils/AppIcons";
 import { styled } from "@mui/material/styles";
-import { HomeFeed, iPlayerData, newsData, soundsData } from "../models/types";
-import { Box } from "@mui/material";
-import { useNavigate } from "react-router-dom";
+import Typography from "@mui/material/Typography";
 import { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+import { useFetchCatergoryData } from "../hooks/useFetchDigestData";
+import { HomeFeed } from "../models/types";
+import AppIcons from "../utils/AppIcons";
 
 const StyledCard = styled(Card)(({ theme }) => ({
   maxWidth: 450,
@@ -93,7 +93,7 @@ export const DigestCard = ({ digest }: DigestCardProps) => {
             ml: 1,
           }}
         >
-          {getDigestAppCategory === "iplayer"
+          {getDigestAppCategory === "iPlayer"
             ? "iPlayer"
             : getDigestAppCategory.charAt(0).toUpperCase() +
               getDigestAppCategory.slice(1)}
