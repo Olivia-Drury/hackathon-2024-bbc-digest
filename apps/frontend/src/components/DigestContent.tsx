@@ -4,15 +4,9 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
-import CardActionArea from '@mui/material/CardActionArea';
 import { iplayerSoundsEpisodeData } from "../models/types";
 import { Box, styled } from "@mui/material";
-import AppIcons from "../utils/AppIcons";
 
-// Dummy implementation of getDigestAppCategory
-const getDigestAppCategory = () => {
-  return "someCategory";
-};
 
 const StyledEpisodeCard = styled(Card)(({ theme }) => ({
   maxHeight: 300,
@@ -40,16 +34,12 @@ const DigestContent = () => {
           padding: 2, // Add padding
         }}
       >
-        {/* <AppIcons app={getDigestAppCategory} /> */}
+
         <Typography
           sx={{
             ml: 1,
           }}
         >
-          {/* {getDigestAppCategory === 'iplayer'
-            ? 'iPlayer'
-            : getDigestAppCategory.charAt(0).toUpperCase() +
-              getDigestAppCategory.slice(1)} */}
         </Typography>
         <h1>{data.title}</h1>
         <p>{data.description}</p>

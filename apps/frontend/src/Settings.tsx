@@ -1,10 +1,5 @@
 import "./App.css";
-import BottomNavigation from "@mui/material/BottomNavigation";
-import BottomNavigationAction from "@mui/material/BottomNavigationAction";
 import Box from "@mui/material/Box";
-import Paper from "@mui/material/Paper";
-import HomeIcon from "@mui/icons-material/Home";
-import BBCIcon from "./utils/BBCIcon";
 import { Button, Checkbox, Divider, FormControlLabel, FormGroup, Slider, Typography } from '@mui/material';
 
 function Settings() {
