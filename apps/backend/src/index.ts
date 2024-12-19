@@ -2,9 +2,11 @@ import express, { Express, Request, Response } from 'express';
 import { resolve } from 'path';
 
 import { data } from '../data';
+import cors from "cors";
 
 const app: Express = express();
-const port = 3000;
+app.use(cors());
+const port = 4000;
 
 app.get('/home-feed', (req: Request, res: Response) => {
   res.send(data.homeFeed);
@@ -43,8 +45,9 @@ app.get(`/iPlayer/:id`, (req: Request, res: Response) => {
   res.send(iPlayerProgramme);
 });
 
-app.use('/media', express.static(resolve(__dirname, '../media')));
+app.use("/media", express.static(resolve(__dirname, "../media")));
 
 app.listen(port, () => {
   console.log(`[server]: Server is running at http://localhost:${port}`);
 });
+
