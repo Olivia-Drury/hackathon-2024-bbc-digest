@@ -6,6 +6,7 @@ import { useFetchDigestData } from "./hooks/useFetchDigestData";
 import Layout from "./Layout";
 import { HomeFeed, NavigationDigest } from "./models/types";
 import Settings from "./Settings";
+import VideoPlayer from "./utils/VideoPlayer";
 
 // lifted this out to fix the issue for useNavigate call before react router being intialised
 const Home = ({ digestData }: { digestData: HomeFeed[] }) => {
@@ -65,6 +66,7 @@ const App = () => {
             </Layout>
           }
         />
+        <Route path="/player" element={<VideoPlayer />} />
       </Routes>
     </Router>
   );
