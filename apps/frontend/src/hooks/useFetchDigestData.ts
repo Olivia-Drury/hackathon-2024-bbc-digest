@@ -1,9 +1,6 @@
 import { useEffect, useState } from "react";
 import {
   HomeFeed,
-  soundsData,
-  iPlayerData,
-  newsData,
   CategoryType,
 } from "../models/types";
 import { CategoryDataMapper } from "../utils/CategoryDataMapper";
